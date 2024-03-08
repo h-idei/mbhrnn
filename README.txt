@@ -1,4 +1,4 @@
-C++ code of predictive-coding-inspired variational recurrent neural network model (PV-RNN)
+C++ code of multimodal Bayesian homeostatic recurrent neural network model (PV-RNN)
 
 1. Tested environment
     -OS: Ubuntu (20.04)
