@@ -56,7 +56,7 @@ using namespace std;
 #define S_ETA 0.000001 //used to avoid null computation
 
 #define PI 3.141592653589793
-#define WEIGHT_SEED 1 //1~10
+#define WEIGHT_SEED 9 //1~10
 mt19937 engine(WEIGHT_SEED);
 
 //hyper-parameter used in error regression
