@@ -43,7 +43,56 @@ int main(void){
     vector<vector<vector<double> > > wkl_neuromodulation(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
     vector<vector<vector<double> > > wkl_associative(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
     vector<vector<vector<double> > > wkl_executive(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
-
+    
+    vector<vector<vector<double> > > in_p_mu_executive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_executive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_executive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_executive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
+    vector<vector<vector<double> > > wkl_executive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(executive_z_num, 0)));
+    
+    vector<vector<vector<double> > > in_p_mu_neuromodulation_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_neuromodulation_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_neuromodulation_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_neuromodulation_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
+    vector<vector<vector<double> > > wkl_neuromodulation_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(neuromodulation_z_num, 0)));
+    
+    vector<vector<vector<double> > > in_p_mu_associative_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_associative_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_associative_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_associative_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
+    vector<vector<vector<double> > > wkl_associative_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(associative_z_num, 0)));
+    
+    vector<vector<vector<double> > > in_p_mu_exteroceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(exteroceptive_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_exteroceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(exteroceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_exteroceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(exteroceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_exteroceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(exteroceptive_z_num, 0)));
+    vector<vector<vector<double> > > wkl_exteroceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(exteroceptive_z_num, 0)));
+    
+    vector<vector<vector<double> > > in_p_mu_proprioceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(proprioceptive_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_proprioceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(proprioceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_proprioceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(proprioceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_proprioceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(proprioceptive_z_num, 0)));
+    vector<vector<vector<double> > > wkl_proprioceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(proprioceptive_z_num, 0)));
+    
+    vector<vector<vector<double> > > in_p_mu_interoceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(interoceptive_z_num, 0)));
+    vector<vector<vector<double> > > in_p_sigma_interoceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(interoceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_mu_interoceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(interoceptive_z_num, 0)));
+    vector<vector<vector<double> > > a_sigma_interoceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(interoceptive_z_num, 0)));
+    vector<vector<vector<double> > > wkl_interoceptive_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(interoceptive_z_num, 0)));
+    
+    vector<vector<vector<double> > > output_extero_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_extero_num, 0)));
+    vector<vector<vector<double> > > output_proprio_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_proprio_num, 0)));
+    vector<vector<vector<double> > > output_intero_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_intero_num, 0)));
+    
+    vector<vector<vector<double> > > sensory_sigma_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_num, 0)));
+    
+    vector<vector<vector<double> > > pe_extero_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_extero_num, 0)));
+    vector<vector<vector<double> > > pe_proprio_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_proprio_num, 0)));
+    vector<vector<vector<double> > > pe_intero_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(x_intero_num, 0)));
+    
+    vector<vector<vector<double> > > fe_past_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(1, 0)));
+    vector<vector<vector<double> > > fe_future_window_head(TEST_SEQ_NUM, vector<vector<double> >(MAX_TIME_LENGTH, vector<double>(1, 0)));
+    
     vector<vector<double> > points(POINT, vector<double>(2, 0));
     for(int i=0; i<POINT; ++i){
         int x = i%5;
@@ -172,6 +221,10 @@ int main(void){
                 string str_path_generation_food = path_generation_food.str();
                 mkdir(str_path_generation_food.c_str(), 0777);
                 
+                stringstream path_generation_fe;
+                path_generation_fe << "./test_generation_allostasis" << "/fw_" << future_window << "/pw_" << past_window << "/itr_" << iteration << "/lr_" << alpha;
+                string str_path_generation_fe = path_generation_fe.str();
+                
                 double max_sigma_intero = sqrt(0.1);
                 double cue_x = 0.0;
                 double cue_y = 0.4;
@@ -197,8 +250,6 @@ int main(void){
                         int lr_normalization = er_past_window+future_window;
                         //int epoch_flag = 0;
                         for(int epoch=0;epoch<iteration;++epoch){
-                            //if(epoch_flag == 1) continue;
-                            
                             //Feedforward
                             for(int wt=ct-er_past_window+1;wt<=ct+future_window;++wt){//wt: time step within time window
                                 int last_window_step=0;
@@ -345,44 +396,60 @@ int main(void){
                             }
                             
                             //error
-                            double loss = 0;
                             double normalize = 1.0/lr_normalization;
+                            fe_past_window_head[s][ct][0] = 0.0;
+                            fe_future_window_head[s][ct][0] = 0.0;
                             for(int wt=ct-er_past_window+1;wt<=ct+future_window;++wt){
+                                double future_entropy_constant_term;
+                                (wt<=ct) ? (future_entropy_constant_term=0.0) : (future_entropy_constant_term=1.0);
+                                double past_flag;
+                                (wt<=ct) ? (past_flag=1.0) : (past_flag=0.0);
+                                double future_flag;
+                                (wt<=ct) ? (future_flag=0.0) : (future_flag=1.0);
                                 for(int i=0; i<x_extero_num; ++i){
-                                    pe_extero[s][wt][i] = 0.5*(pow((target_extero[s][wt][i]-out_extero.output[s][wt][i])/x_sigma_extero[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_extero[s][wt][i]))*normalize/x_extero_num;
-                                    loss += pe_extero[s][wt][i];
+                                    pe_extero[s][wt][i] = 0.5*(pow((target_extero[s][wt][i]-out_extero.output[s][wt][i])/x_sigma_extero[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_extero[s][wt][i])+future_entropy_constant_term)*normalize/x_extero_num;
+                                    fe_past_window_head[s][ct][0] += past_flag*pe_extero[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*pe_extero[s][wt][i];
                                 }
                                 for(int i=0; i<x_proprio_num; ++i){
-                                    pe_proprio[s][wt][i] = 0.5*(pow((target_proprio[s][wt][i]-out_proprio.output[s][wt][i])/x_sigma_proprio[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_proprio[s][wt][i]))*normalize/x_proprio_num;
-                                    loss += pe_proprio[s][wt][i];
+                                    pe_proprio[s][wt][i] = 0.5*(pow((target_proprio[s][wt][i]-out_proprio.output[s][wt][i])/x_sigma_proprio[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_proprio[s][wt][i])+future_entropy_constant_term)*normalize/x_proprio_num;
+                                    fe_past_window_head[s][ct][0] += past_flag*pe_proprio[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*pe_proprio[s][wt][i];
                                 }
                                 for(int i=0; i<x_intero_num; ++i){
-                                    pe_intero[s][wt][i] = 0.5*(pow((target_intero[s][wt][i]-out_intero.output[s][wt][i])/x_sigma_intero[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_intero[s][wt][i]))*normalize/x_intero_num;
-                                    loss += pe_intero[s][wt][i];
+                                    pe_intero[s][wt][i] = 0.5*(pow((target_intero[s][wt][i]-out_intero.output[s][wt][i])/x_sigma_intero[s][wt][i],2)+log(2*PI)+2.0*log(x_sigma_intero[s][wt][i])+future_entropy_constant_term)*normalize/x_intero_num;
+                                    fe_past_window_head[s][ct][0] += past_flag*pe_intero[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*pe_intero[s][wt][i];
                                 }
                                 for(int i=0; i<exteroceptive_z_num; ++i){
                                     wkl_exteroceptive[s][wt][i] = exteroceptive_W*(log(exteroceptive.p_sigma[s][wt][i])-log(exteroceptive.q_sigma[s][wt][i])+0.5*(pow(exteroceptive.p_mu[s][wt][i]-exteroceptive.q_mu[s][wt][i],2)+pow(exteroceptive.q_sigma[s][wt][i],2))/pow(exteroceptive.p_sigma[s][wt][i],2)-0.5)*normalize/exteroceptive_z_num;
-                                    loss += wkl_exteroceptive[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_exteroceptive[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_exteroceptive[s][wt][i];
                                 }
                                 for(int i=0; i<proprioceptive_z_num; ++i){
                                     wkl_proprioceptive[s][wt][i] = proprioceptive_W*(log(proprioceptive.p_sigma[s][wt][i])-log(proprioceptive.q_sigma[s][wt][i])+0.5*(pow(proprioceptive.p_mu[s][wt][i]-proprioceptive.q_mu[s][wt][i],2)+pow(proprioceptive.q_sigma[s][wt][i],2))/pow(proprioceptive.p_sigma[s][wt][i],2)-0.5)*normalize/proprioceptive_z_num;
-                                    loss += wkl_proprioceptive[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_proprioceptive[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_proprioceptive[s][wt][i];
                                 }
                                 for(int i=0; i<interoceptive_z_num; ++i){
                                     wkl_interoceptive[s][wt][i] = interoceptive_W*(log(interoceptive.p_sigma[s][wt][i])-log(interoceptive.q_sigma[s][wt][i])+0.5*(pow(interoceptive.p_mu[s][wt][i]-interoceptive.q_mu[s][wt][i],2)+pow(interoceptive.q_sigma[s][wt][i],2))/pow(interoceptive.p_sigma[s][wt][i],2)-0.5)*normalize/interoceptive_z_num;
-                                    loss += wkl_interoceptive[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_interoceptive[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_interoceptive[s][wt][i];
                                 }
                                 for(int i=0; i<neuromodulation_z_num; ++i){
                                     wkl_neuromodulation[s][wt][i] = neuromodulation_W*(log(neuromodulation.p_sigma[s][wt][i])-log(neuromodulation.q_sigma[s][wt][i])+0.5*(pow(neuromodulation.p_mu[s][wt][i]-neuromodulation.q_mu[s][wt][i],2)+pow(neuromodulation.q_sigma[s][wt][i],2))/pow(neuromodulation.p_sigma[s][wt][i],2)-0.5)*normalize/neuromodulation_z_num;
-                                    loss += wkl_neuromodulation[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_neuromodulation[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_neuromodulation[s][wt][i];
                                 }
                                 for(int i=0; i<associative_z_num; ++i){
                                     wkl_associative[s][wt][i] = associative_W*(log(associative.p_sigma[s][wt][i])-log(associative.q_sigma[s][wt][i])+0.5*(pow(associative.p_mu[s][wt][i]-associative.q_mu[s][wt][i],2)+pow(associative.q_sigma[s][wt][i],2))/pow(associative.p_sigma[s][wt][i],2)-0.5)*normalize/associative_z_num;
-                                    loss += wkl_associative[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_associative[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_associative[s][wt][i];
                                 }
                                 for(int i=0; i<executive_z_num; ++i){
                                     wkl_executive[s][wt][i] = executive_W*(log(executive.p_sigma[s][wt][i])-log(executive.q_sigma[s][wt][i])+0.5*(pow(executive.p_mu[s][wt][i]-executive.q_mu[s][wt][i],2)+pow(executive.q_sigma[s][wt][i],2))/pow(executive.p_sigma[s][wt][i],2)-0.5)*normalize/executive_z_num;
-                                    loss += wkl_executive[s][wt][i];
+                                    fe_past_window_head[s][ct][0] += past_flag*wkl_executive[s][wt][i];
+                                    fe_future_window_head[s][ct][0] += future_flag*wkl_executive[s][wt][i];
                                 }
                             }
                             
@@ -460,6 +527,63 @@ int main(void){
                             }
                             
                         }
+                        //set timeseries at the head of the past time window
+                        for(int i=0; i<executive_z_num; ++i){
+                            in_p_mu_executive_window_head[s][ct][i] = executive.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_executive_window_head[s][ct][i] = executive.internal_state_p_sigma[s][ct][i];
+                            a_mu_executive_window_head[s][ct][i] = executive.a_mu[s][ct][i];
+                            a_sigma_executive_window_head[s][ct][i] = executive.a_sigma[s][ct][i];
+                            wkl_executive_window_head[s][ct][i] = wkl_executive[s][ct][i];
+                        }
+                        for(int i=0; i<neuromodulation_z_num; ++i){
+                            in_p_mu_neuromodulation_window_head[s][ct][i] = neuromodulation.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_neuromodulation_window_head[s][ct][i] = neuromodulation.internal_state_p_sigma[s][ct][i];
+                            a_mu_neuromodulation_window_head[s][ct][i] = neuromodulation.a_mu[s][ct][i];
+                            a_sigma_neuromodulation_window_head[s][ct][i] = neuromodulation.a_sigma[s][ct][i];
+                            wkl_neuromodulation_window_head[s][ct][i] = wkl_neuromodulation[s][ct][i];
+                        }
+                        for(int i=0; i<associative_z_num; ++i){
+                            in_p_mu_associative_window_head[s][ct][i] = associative.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_associative_window_head[s][ct][i] = associative.internal_state_p_sigma[s][ct][i];
+                            a_mu_associative_window_head[s][ct][i] = associative.a_mu[s][ct][i];
+                            a_sigma_associative_window_head[s][ct][i] = associative.a_sigma[s][ct][i];
+                            wkl_associative_window_head[s][ct][i] = wkl_associative[s][ct][i];
+                        }
+                        for(int i=0; i<exteroceptive_z_num; ++i){
+                            in_p_mu_exteroceptive_window_head[s][ct][i] = exteroceptive.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_exteroceptive_window_head[s][ct][i] = exteroceptive.internal_state_p_sigma[s][ct][i];
+                            a_mu_exteroceptive_window_head[s][ct][i] = exteroceptive.a_mu[s][ct][i];
+                            a_sigma_exteroceptive_window_head[s][ct][i] = exteroceptive.a_sigma[s][ct][i];
+                            wkl_exteroceptive_window_head[s][ct][i] = wkl_exteroceptive[s][ct][i];
+                        }
+                        for(int i=0; i<proprioceptive_z_num; ++i){
+                            in_p_mu_proprioceptive_window_head[s][ct][i] = proprioceptive.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_proprioceptive_window_head[s][ct][i] = proprioceptive.internal_state_p_sigma[s][ct][i];
+                            a_mu_proprioceptive_window_head[s][ct][i] = proprioceptive.a_mu[s][ct][i];
+                            a_sigma_proprioceptive_window_head[s][ct][i] = proprioceptive.a_sigma[s][ct][i];
+                            wkl_proprioceptive_window_head[s][ct][i] = wkl_proprioceptive[s][ct][i];
+                        }
+                        for(int i=0; i<interoceptive_z_num; ++i){
+                            in_p_mu_interoceptive_window_head[s][ct][i] = interoceptive.internal_state_p_mu[s][ct][i];
+                            in_p_sigma_interoceptive_window_head[s][ct][i] = interoceptive.internal_state_p_sigma[s][ct][i];
+                            a_mu_interoceptive_window_head[s][ct][i] = interoceptive.a_mu[s][ct][i];
+                            a_sigma_interoceptive_window_head[s][ct][i] = interoceptive.a_sigma[s][ct][i];
+                            wkl_interoceptive_window_head[s][ct][i] = wkl_interoceptive[s][ct][i];
+                        }
+                        for(int i = 0; i < x_num; ++i){
+                            sensory_sigma_window_head[s][ct][i] = out_nm.output[s][ct][i];
+                            if(i<x_extero_num){
+                                output_extero_window_head[s][ct][i] = out_extero.output[s][ct][i];
+                                pe_extero_window_head[s][ct][i] = pe_extero[s][ct][i];
+                            }else if(i<x_extero_num+x_proprio_num){
+                                output_proprio_window_head[s][ct][i-x_extero_num] = out_proprio.output[s][ct][i-x_extero_num];
+                                pe_proprio_window_head[s][ct][i-x_extero_num] = pe_proprio[s][ct][i-x_extero_num];
+                            }else{
+                                output_intero_window_head[s][ct][i-x_extero_num-x_proprio_num] = out_intero.output[s][ct][i-x_extero_num-x_proprio_num];
+                                pe_intero_window_head[s][ct][i-x_extero_num-x_proprio_num] = pe_intero[s][ct][i-x_extero_num-x_proprio_num];
+                            }
+                        }
+                        
                         //Save generated sequence
                         if(ct==TIME_LENGTH-1){
                         executive.er_save_sequence(str_path_generation_executive, TIME_LENGTH, s, ct);
@@ -487,6 +611,56 @@ int main(void){
                         save_generated_sequence(str_path_generation_out_proprio, "real", real_state_proprio, TIME_LENGTH, s, ct);
                         save_generated_sequence(str_path_generation_out_intero, "real", real_state_intero, TIME_LENGTH, s, ct);
                         save_generated_sequence(str_path_generation_food, "food", food_position_state_sequence, TIME_LENGTH, s, ct);
+                        
+                        //save timeseries at the head of the past time window
+                        save_generated_sequence(str_path_generation_executive, "in_p_mu_window_head", in_p_mu_executive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_executive, "in_p_sigma_window_head", in_p_sigma_executive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_executive, "a_mu_window_head", a_mu_executive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_executive, "a_sigma_window_head", a_sigma_executive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_executive, "wkld_window_head", wkl_executive_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_neuromodulation, "in_p_mu_window_head", in_p_mu_neuromodulation_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_neuromodulation, "in_p_sigma_window_head", in_p_sigma_neuromodulation_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_neuromodulation, "a_mu_window_head", a_mu_neuromodulation_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_neuromodulation, "a_sigma_window_head", a_sigma_neuromodulation_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_neuromodulation, "wkld_window_head", wkl_neuromodulation_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_associative, "in_p_mu_window_head", in_p_mu_associative_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_associative, "in_p_sigma_window_head", in_p_sigma_associative_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_associative, "a_mu_window_head", a_mu_associative_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_associative, "a_sigma_window_head", a_sigma_associative_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_associative, "wkld_window_head", wkl_associative_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_exteroceptive, "in_p_mu_window_head", in_p_mu_exteroceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_exteroceptive, "in_p_sigma_window_head", in_p_sigma_exteroceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_exteroceptive, "a_mu_window_head", a_mu_exteroceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_exteroceptive, "a_sigma_window_head", a_sigma_exteroceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_exteroceptive, "wkld_window_head", wkl_exteroceptive_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_proprioceptive, "in_p_mu_window_head", in_p_mu_proprioceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_proprioceptive, "in_p_sigma_window_head", in_p_sigma_proprioceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_proprioceptive, "a_mu_window_head", a_mu_proprioceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_proprioceptive, "a_sigma_window_head", a_sigma_proprioceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_proprioceptive, "wkld_window_head", wkl_proprioceptive_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_interoceptive, "in_p_mu_window_head", in_p_mu_interoceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_interoceptive, "in_p_sigma_window_head", in_p_sigma_interoceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_interoceptive, "a_mu_window_head", a_mu_interoceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_interoceptive, "a_sigma_window_head", a_sigma_interoceptive_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_interoceptive, "wkld_window_head", wkl_interoceptive_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_out_extero, "output_window_head", output_extero_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_out_proprio, "output_window_head", output_proprio_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_out_intero, "output_window_head", output_intero_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_out_nm, "output_window_head", sensory_sigma_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_out_extero, "pe_window_head", pe_extero_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_out_proprio, "pe_window_head", pe_proprio_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_out_intero, "pe_window_head", pe_intero_window_head, TIME_LENGTH, s, ct);
+                        
+                        save_generated_sequence(str_path_generation_fe, "fe_past_window_head", fe_past_window_head, TIME_LENGTH, s, ct);
+                        save_generated_sequence(str_path_generation_fe, "fe_future_window_head", fe_future_window_head, TIME_LENGTH, s, ct);
                         }
                     }
                     
